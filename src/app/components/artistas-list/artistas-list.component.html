@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Lista de Artistas</h2>
+    <button class="btn btn-success" (click)="navigateToCreate()">Crear artista</button>
+  </div>
+  <hr> <!-- Separador -->
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>País</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artista of artistas; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ artista.nombre }}</td>
+        <td>{{ artista.pais.nombre }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="openEditModal(artista)">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="confirmDelete(artista.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

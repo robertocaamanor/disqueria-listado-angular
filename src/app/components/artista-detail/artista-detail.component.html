@@ -1,0 +1,57 @@
+<div class="container mt-4">
+    <h2>Añadir Artista</h2>
+    <form [formGroup]="artistaForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          class="form-control"
+          formControlName="nombre"
+          placeholder="Nombre del artista"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="genero" class="form-label">Género</label>
+        <input
+          type="text"
+          id="genero"
+          class="form-control"
+          formControlName="genero"
+          placeholder="Género musical"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="nacimiento" class="form-label">Año de nacimiento</label>
+        <input
+          type="text"
+          id="nacimiento"
+          class="form-control"
+          formControlName="nacimiento"
+          placeholder="Nacimiento"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="anio_debut" class="form-label">Año de debut</label>
+        <input
+          type="text"
+          id="anio_debut"
+          class="form-control"
+          formControlName="anio_debut"
+          placeholder="Año de debut"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="paisId" class="form-label">País</label>
+        <select id="paisId" class="form-select" formControlName="paisId">
+          <option value="" disabled selected>Seleccione un país</option>
+          <option *ngFor="let pais of paises" [value]="pais.id">
+            {{ pais.nombre }}
+          </option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!artistaForm.valid">
+        Guardar
+      </button>
+    </form>
+  </div>

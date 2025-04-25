@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h5 class="modal-title">Editar Artista</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="cancel()"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="artistaForm">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input id="nombre" type="text" class="form-control" formControlName="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+        <input id="nacimiento" type="date" class="form-control" formControlName="nacimiento">
+      </div>
+      <div class="mb-3">
+        <label for="anio_debut" class="form-label">Año de Debut</label>
+        <input id="anio_debut" type="text" class="form-control" formControlName="anio_debut">
+      </div>
+      <div class="mb-3">
+        <label for="paisId" class="form-label">País</label>
+        <select id="paisId" class="form-select" formControlName="paisId">
+          <option value="" disabled selected>Seleccione un país</option>
+          <option *ngFor="let pais of paises" [value]="pais.id">
+            {{ pais.nombre }}
+          </option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+    <button type="button" class="btn btn-primary" (click)="save()">Guardar</button>
+  </div>
