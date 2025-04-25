@@ -1,26 +1,60 @@
 # FrontendArtistas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+Este proyecto es el frontend de una aplicación para gestionar artistas. Fue generado utilizando [Angular CLI](https://github.com/angular/angular-cli) versión 19.1.7.
+
+## Requisitos previos
+
+- Node.js (versión recomendada: 18 o superior)
+- Angular CLI instalado globalmente (`npm install -g @angular/cli`)
+- Un servidor backend funcional (ver sección "Backend")
+
+## Backend
+
+Para que este frontend funcione correctamente, necesitas montar el backend correspondiente. Sigue estos pasos:
+
+1. Clona el repositorio del backend:
+   ```bash
+   git clone https://github.com/robertocaamanor/api-nestjs-disqueria.git
+   ```
+
+2. Accede al directorio del backend:
+   ```bash
+   cd api-nestjs-disqueria
+   ```
+
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+4. Configura las variables de entorno según las instrucciones del repositorio del backend.
+
+5. Inicia el servidor:
+   ```bash
+   npm run start
+   ```
+
+El backend estará disponible en `http://localhost:3000` por defecto.
 
 ## Development server
 
-To start a local development server, run:
+Para iniciar un servidor de desarrollo local para el frontend, ejecuta:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Una vez que el servidor esté en ejecución, abre tu navegador y navega a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que modifiques los archivos fuente.
 
 ## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular CLI incluye herramientas de scaffolding para generar nuevos componentes, directivas, pipes, etc. Por ejemplo, para generar un nuevo componente, ejecuta:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ver una lista completa de esquemas disponibles, ejecuta:
 
 ```bash
 ng generate --help
@@ -28,17 +62,17 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+Para compilar el proyecto, ejecuta:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Esto generará los artefactos de compilación en el directorio `dist/`. Por defecto, la compilación de producción optimiza la aplicación para rendimiento y velocidad.
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para ejecutar pruebas unitarias con el framework [Karma](https://karma-runner.github.io), usa el siguiente comando:
 
 ```bash
 ng test
@@ -46,14 +80,14 @@ ng test
 
 ## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+Para pruebas end-to-end (e2e), ejecuta:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Nota: Angular CLI no incluye un framework de pruebas e2e por defecto. Puedes elegir uno que se adapte a tus necesidades.
 
-## Additional Resources
+## Recursos adicionales
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para más información sobre el uso de Angular CLI, incluyendo referencias detalladas de comandos, visita la [documentación oficial de Angular CLI](https://angular.dev/tools/cli).
